@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procesador DXF</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Procesador de Archivos DXF</h1>
+        <form action="/files/upload/" method="post" enctype="multipart/form-data" class="upload-form">
+            <label for="file">Selecciona un archivo DXF:</label>
+            <input type="file" name="file" id="file" accept=".dxf" required>
+            <button type="submit">Subir y Procesar</button>
+        </form>
+        <div id="result">
+            <!-- Aquí se mostrará el número de entidades procesadas -->
+        </div>
+    </div>
+</body>
+</html>
