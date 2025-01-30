@@ -12,11 +12,19 @@
         <form action="/files/upload/" method="post" enctype="multipart/form-data" class="upload-form">
             <label for="file">Selecciona un archivo DXF:</label>
             <input type="file" name="file" id="file" accept=".dxf" required>
+        
+            <label for="material">Selecciona el material:</label>
+            <select name="material" id="material" required>
+                {% for material in materials %}
+                    <option value="{{ material }}">{{ material }}</option>
+                {% endfor %}
+            </select>
+        
+            <label for="cantidad">Cantidad de piezas:</label>
+            <input type="number" name="cantidad" id="cantidad" min="1" required>
+        
             <button type="submit">Subir y Procesar</button>
-        </form>
-        <div id="result">
-            <!-- Aquí se mostrará el número de entidades procesadas -->
-        </div>
+        </form>        
     </div>
 </body>
 </html>
